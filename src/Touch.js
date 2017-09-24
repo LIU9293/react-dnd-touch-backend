@@ -376,6 +376,7 @@ export class TouchBackend {
         this.actions.publishDragSource();
 
         e.preventDefault();
+        e.stopepropagation();
 
         // Get the node elements of the hovered DropTargets
         const dragOverTargetNodes = dragOverTargetIds.map(key => this.targetNodes[key]);
@@ -421,6 +422,7 @@ export class TouchBackend {
         }
 
         e.preventDefault();
+        e.stopepropagation();
 
         this._mouseClientOffset = {};
 
